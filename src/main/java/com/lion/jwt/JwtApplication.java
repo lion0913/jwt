@@ -3,6 +3,7 @@ package com.lion.jwt;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class JwtApplication {
@@ -11,4 +12,8 @@ public class JwtApplication {
         SpringApplication.run(JwtApplication.class, args);
     }
 
+    @Bean
+    public ObjectMapper objectMapper() {
+        return new ObjectMapper();
+    }
 }
